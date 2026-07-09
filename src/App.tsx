@@ -58,7 +58,7 @@ export default function App() {
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-100 px-6 py-4 mb-8">
         <h1 className="text-2xl font-bold text-gray-800">🎨 UI Components</h1>
-        <p className="text-sm text-gray-400 mt-1">React + Tailwind CSS 组件库演示</p>
+        <p className="text-sm text-gray-400 mt-1">React + Tailwind CSS 组件库演示 · 无需登录，纯展示页面</p>
       </header>
       <div className="max-w-4xl mx-auto px-4 pb-16 space-y-10">
         {/* Button */}
@@ -107,10 +107,11 @@ export default function App() {
         </Card>
         {/* Input */}
         <Card>
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">Input 输入框</h2>
+          <h2 className="text-lg font-semibold text-gray-800 mb-4">Input 输入框（演示）</h2>
+          <p className="text-xs text-amber-600 mb-3">⚠️ 以下为组件功能演示，非真实登录表单</p>
           <div className="max-w-sm">
-            <Input label="用户名" placeholder="请输入用户名" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
-            <Input label="密码" type="password" placeholder="请输入密码" />
+            <Input label="姓名（演示）" placeholder="随便输入试试" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
+            <Input label="密码（演示）" type="password" placeholder="密码输入框效果展示" />
             {inputValue && <p className="text-sm text-gray-400 mt-1">已输入: {inputValue}</p>}
           </div>
           <CodeBlock code={`<Input label="用户名" placeholder="请输入" />`} />
